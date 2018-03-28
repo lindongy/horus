@@ -353,6 +353,7 @@ bool menuModelSelect(event_t event)
 #define EDITIN_ENTER 1
 #if EDITIN_ENTER
       if (selectMode == MODE_SELECT_MODEL) {
+        killEvents(event);
         onModelSelectMenu(STR_SELECT_MODEL);
         return false;
       }

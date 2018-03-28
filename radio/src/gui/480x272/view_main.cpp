@@ -152,7 +152,7 @@ bool menuMainView(event_t event)
     case EVT_KEY_BREAK(KEY_ENTER):
       killEvents(event);
       chainMenu(menuModelSelect);
-      break;
+      return false;
 #endif
     case EVT_KEY_LONG(KEY_ENTER):
       killEvents(event);

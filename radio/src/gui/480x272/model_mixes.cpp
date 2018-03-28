@@ -453,7 +453,7 @@ bool menuModelMixAll(event_t event)
       s_copyMode = 0;
       killEvents(event);
       pushMenu(menuModelMixOne);
-      break;
+      return false;
 #else
       if ((!s_currCh || (s_copyMode && !s_copyTgtOfs)) && !READ_ONLY()) {
         s_copyMode = (s_copyMode == COPY_MODE ? MOVE_MODE : COPY_MODE);
